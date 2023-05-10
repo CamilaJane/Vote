@@ -6,13 +6,13 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 // const PORT = process.end.PORT || 8000;
 
-const defURL = "http://localhost:8000/"
+const defURL = "https://voting-app-grp9.onrender.com"
 
 app.use(express.static('public'));
 
 app.set("view engine", "ejs");
 
-app.get("/vote", function(req, res){
+app.get("/", function(req, res){
 res.render("pages/vote", {socketURL:defURL});
 });
 
